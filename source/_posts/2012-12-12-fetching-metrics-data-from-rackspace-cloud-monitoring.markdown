@@ -7,12 +7,12 @@ author: Chris Snell
 categories: 
 - Cloud Monitoring
 ---
-*Guest post contributed by Chris Snell, from the Rackspace Enterprise Technical Sales team. Chris can be found at [http://output.chrissnell.com](http://output.chrissnell.com)*
+*Guest post contributed by Chris Snell, from the Rackspace Enterprise Technical Sales team. Chris can be found at <http://output.chrissnell.com>
 
 In August, Rackspace launched a cloud-based monitoring service that gave its users the ability to monitor infrastructure without having to invest time and servers in an on-premesis monitoring environment.  The initial release of Cloud Monitoring was limited to service and server availability checks, run centrally, that could trigger scriptable alert actions when a fault is detected.  Last week, the Rackspace Monitoring team unveiled a [new software agent](http://www.rackspace.com/knowledge_center/article/install-the-cloud-monitoring-agent) that can gather performance metrics directly on the server.  The administrator installs the agent on their servers and the agent begins reporting metrics like CPU, disk, and RAM utilization back to the Rackspace Monitoring cloud.  The current metrics data then becomes visible on the MyCloud control panel:
 
 <center>
-<img src="images/servermetrics.png">
+![Server Metrics](/images/servermetrics.png)
 </center>
 
 I recently wrote a patch for Rackspace Cloud Monitoring's [Python binding](https://github.com/racker/rackspace-monitoring) that adds the ability to fetch current and historical metrics data collected by the agent from the Cloud Monitoring API.   Using the library to fetch this data is simple.  You'll need the IDs of the entity (the host being monitored), the check (CPU, memory, etc.), and the metric name, which is specific to the type of check.
